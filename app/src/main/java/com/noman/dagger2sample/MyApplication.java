@@ -6,6 +6,7 @@ import com.noman.dagger2sample.di.ApiComponent;
 import com.noman.dagger2sample.di.ApiModule;
 import com.noman.dagger2sample.di.AppModule;
 import com.noman.dagger2sample.di.DaggerApiComponent;
+import com.noman.dagger2sample.di.SharedPrefModule;
 
 public class MyApplication extends Application {
 
@@ -18,6 +19,7 @@ public class MyApplication extends Application {
         mApiComponent = DaggerApiComponent.builder()
                 .appModule(new AppModule(this))
                 .apiModule(new ApiModule("https://simplifiedcoding.net/demos/"))
+                .sharedPrefModule(new SharedPrefModule(this))
                 .build();
 
     }

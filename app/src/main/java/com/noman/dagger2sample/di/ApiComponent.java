@@ -7,11 +7,11 @@ import javax.inject.Singleton;
 
 import dagger.Component;
 
+// Dagger2 component that provide modules with providers
 @Singleton
-@Component(modules = {AppModule.class, ApiModule.class})
+@Component(modules = {AppModule.class, ApiModule.class, SharedPrefModule.class})
 public interface ApiComponent {
 
     void inject(MainActivity activity);
-
 
 }

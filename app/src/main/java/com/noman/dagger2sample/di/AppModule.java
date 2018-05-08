@@ -7,6 +7,7 @@ import javax.inject.Singleton;
 import dagger.Module;
 import dagger.Provides;
 
+// App module for Application provider
 @Module
 public class AppModule {
 
@@ -21,5 +22,7 @@ public class AppModule {
     Application provideApplication() {
         return mApplication;
     }
+
+
 
 }
